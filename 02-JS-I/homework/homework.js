@@ -236,20 +236,12 @@ function esVocal(letra){
   // Si no es vocal, tambien debe devolver "Dato incorrecto".
   //Escribe tu código aquí
      
-  if (letra.length<2){
+  if (letra.length<=1){
     switch(letra){
       case 'a':
-          return 'Es vocal';
-      break;
       case 'e':
-          return 'Es vocal';
-      break;
       case 'i':
-          return 'Es vocal';
-      break;
       case 'o':
-          return 'Es vocal';
-      break;
       case 'u':
           return 'Es vocal';
       break;
