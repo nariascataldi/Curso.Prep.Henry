@@ -60,7 +60,7 @@ function sonIguales(x, y) {
   // Devuelve "true" si "x" e "y" son iguales
   // De lo contrario, devuelve "false"
   // Tu código:
-  return x == y;
+  return x === y;
 }
 
 function tienenMismaLongitud(str1, str2) {
@@ -70,7 +70,7 @@ function tienenMismaLongitud(str1, str2) {
   //.length
  var caracteresA = (str1);
  var caracteresB = (str2);
- if (caracteresA.length == caracteresB.length){
+ if (caracteresA.length === caracteresB.length){
    return true;
  } return false;
 }
@@ -79,7 +79,7 @@ function menosQueNoventa(num) {
   // Devuelve "true" si el argumento de la función "num" es menor que noventa
   // De lo contrario, devuelve "false"
   // Tu código:
-  if (num<90){
+  if (num < 90){
     return true;
   } return false;
 }
@@ -88,7 +88,7 @@ function mayorQueCincuenta(num) {
   // Devuelve "true" si el argumento de la función "num" es mayor que cincuenta
   // De lo contrario, devuelve "false"
   // Tu código:
-  if (num>50){
+  if (num > 50){
     return true;
   } return false;
 }
@@ -105,7 +105,7 @@ function esPar(num) {
   // Tu código:
   var par = (num % 2);
 
-  if (par == 0){
+  if (par === 0){
     return true;
   } return false;
 }
@@ -236,21 +236,18 @@ function esVocal(letra){
   // Si no es vocal, tambien debe devolver "Dato incorrecto".
   //Escribe tu código aquí
      
-  if (letra.length<=1){
-    switch(letra){
-      case 'a':
-      case 'e':
-      case 'i':
-      case 'o':
-      case 'u':
-          return 'Es vocal';
-      break;
-      default:
-          return 'Dato incorrecto';
-    }
-  }else{
-        return 'Dato incorrecto';
-    }
+  switch(letra){
+    case 'a':
+    case 'e':
+    case 'i':
+    case 'o':
+    case 'u':
+      return 'Es vocal';
+    break;
+    default:
+      return 'Dato incorrecto';
+    break;
+  }
 }
 
 
