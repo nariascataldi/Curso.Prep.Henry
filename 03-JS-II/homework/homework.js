@@ -154,37 +154,51 @@ function operadoresLogicos(num1, num2, num3) {
 
 if ((num1 === 0 || num2 === 0 || num3 === 0)){
     return 'Error';
-}else if ((num3 && num2 < num1) && num1 >= 0){
-  return 'Número 1 es mayor y positivo';
 }else if (0 > num1 || 0 > num2 || 0 > num3){
   return 'Hay negativos';
+}else if ((num3 && num2 < num1) && num1 >= 0){
+  return 'Número 1 es mayor y positivo';
 }else if (num3 > (num1 && num2)) {
-  return num3++;
+  var num3 = num3 + 1 ;
+  return num3;
 }else {
   return false;
 }
 }
 
-function esPrimo(numero) {
+function esPrimo(numero) {                            //todavía no resuelto.
   // Devuelve "true" si "numero" es primo
   // De lo contrario devuelve "falso"
   // Pista: un número primo solo es divisible por sí mismo y por 1
   // Pista 2: Puedes resolverlo usando un bucle `for`
   // Nota: Los números 0 y 1 NO son considerados números primos
+  var i = 1;
+  for (i; i <= numero; i++) {
+      if (numero % i === 0 && numero/i === 1){  
+      return true;
+    }  
+  } return 'falso';
 }
 
 function esVerdadero(valor){
   //Escribe una función que reciba un valor booleano y retorne “Soy verdadero” 
   //si su valor es true y “Soy falso” si su valor es false.
   //Escribe tu código aquí
-
+  if (valor){
+    return 'Soy verdadero';
+  }else{
+    return 'Soy falso';
+  }
 }
 
-function tablaDelSeis(){
+function tablaDelSeis(){                  //No resuelto aún
   //Escribe una función que muestre la tabla de multiplicar del 6 (del 0 al 60).
   //La función devuelve un array con los resultados de la tabla de multiplicar del 6 en orden creciente.
   //Escribe tu código aquí   
-  
+  for(var i = 0; i <= 10; i++){
+    var tabla = [i * 6];
+    console.log(tabla);
+  }
 }
 
 function tieneTresDigitos(numero){
