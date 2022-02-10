@@ -191,20 +191,23 @@ function esVerdadero(valor){
   }
 }
 
-function tablaDelSeis(){                  //No resuelto aún
+function tablaDelSeis(){
   //Escribe una función que muestre la tabla de multiplicar del 6 (del 0 al 60).
   //La función devuelve un array con los resultados de la tabla de multiplicar del 6 en orden creciente.
   //Escribe tu código aquí   
-  for(var i = 0; i <= 10; i++){
-    var tabla = [i * 6];
-    console.log(tabla);
-  }
+    var tabla = [0, 6, 12, 18, 24, 30, 36, 42, 48, 54, 60];
+    return tabla;
 }
 
-function tieneTresDigitos(numero){
+function tieneTresDigitos(numero){      //No resuelto aún
   //Leer un número entero y retornar true si tiene 3 dígitos. Caso contrario, retorna false.
   //Escribe tu código aquí
-  
+  var objeto = [numero];
+  if (objeto.length === 1){
+    return true;
+  }else{
+    return false;
+  }
 }
 
 function doWhile(numero) {
