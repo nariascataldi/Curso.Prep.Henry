@@ -17,6 +17,7 @@ function devolverUltimoElemento(array) {
 function obtenerLargoDelArray(array) {
   // Devuelve el largo de un array
   // Tu código:
+  return array.length;
 }
 
 
@@ -25,6 +26,15 @@ function incrementarPorUno(array) {
   // Aumenta cada entero por 1
   // y devuelve el array
   // Tu código:
+ // if (Number.isInteger(array)){
+ //var numero = [];
+ //return numero.push(array);
+ // }else{
+ //   return console.log('No es enetro.');
+ // }
+ for (let i = 0; i < array.length; i++){
+   array[i] = array[i] + 1;
+ } return array;
 }
 
 
@@ -32,6 +42,8 @@ function agregarItemAlFinalDelArray(array, elemento) {
   // Añade el "elemento" al final del array
   // y devuelve el array
   // Tu código:
+  array.push(elemento);
+  return array;
 }
 
 
@@ -40,15 +52,22 @@ function agregarItemAlComienzoDelArray(array, elemento) {
   // y devuelve el array
   // Pista: usa el método `.unshift`
   // Tu código:
+  array.unshift(elemento);
+  return array;
 }
 
 
-function dePalabrasAFrase(palabras) {
+function dePalabrasAFrase(palabras) {           //perdí cualquier cantidad de tiempo
   // "palabras" es un array de strings/cadenas
   // Devuelve un string donde todas las palabras estén concatenadas
   // con espacios entre cada palabra
   // Ejemplo: ['Hello', 'world!'] -> 'Hello world!'
   // Tu código:
+ // for (let i = 0; i < palabras.length; i++) {
+ //  console.log(palabras[i] + ' ');
+
+// console.log(`${palabras[0]} ${palabras[1]} ${palabras[2]}`);
+return palabras.join(' ');
 }
 
 
