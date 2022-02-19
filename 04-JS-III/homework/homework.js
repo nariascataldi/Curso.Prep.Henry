@@ -133,6 +133,13 @@ for (var i = 0; i < arguments.length; i++){
 function cuentoElementos(arreglo){
   //Realiza una función que retorne la cantidad de los elementos del arreglo cuyo valor es mayor a 18.
   //Escribe tu código aquí
+  var cuenta = 0;
+  for (var i = 0; i < arreglo.length; i++){
+    if (18 < arreglo[i]){
+      
+      cuenta++;
+    }
+  } return cuenta;
 
 }
 
@@ -142,7 +149,23 @@ function diaDeLaSemana(numeroDeDia) {
   //Realiza una función que dado el número del día de la semana, retorne: Es fin de semana
   //si el día corresponde a Sábado o Domingo y “Es dia Laboral” en caso contrario. 
   //Escribe tu código aquí   
-  
+  switch (numeroDeDia){
+    case 1:
+    case 7:
+      return 'Es fin de semana';
+    break;
+    case 2:
+    case 3:
+    case 4:
+    case 5:
+    case 6:
+      return 'Es dia Laboral';
+    break;
+    default:
+      return 'no definido';
+    break;
+  }
+   
 } 
 
 
@@ -150,7 +173,12 @@ function empiezaConNueve(n) {
   //Desarrolle una función que recibe como parámetro un número entero n. Debe retornar true si el entero 
   //inicia con 9 y false en otro caso.
   //Escribe tu código aquí
-  
+ var nueve = [];
+ nueve[0] = n;
+ var string = nueve.join();
+   if ('9' === string[0]){
+    return true;
+  }return false;
 }
 
 
@@ -158,7 +186,11 @@ function todosIguales(arreglo) {
   //Escriba la función todosIguales, que indique si todos los elementos de un arreglo son iguales:
   //retornar true, caso contrario retornar false.
   //Escribe tu código aquí  
-  
+  for (var i = 1; i < arreglo.length; i++){
+      let a = arreglo[0];
+      let b = arreglo[i];
+      return (!(a !== b)); 
+  } return true;
 } 
 
 
@@ -167,6 +199,73 @@ function mesesDelAño(array) {
   // "Enero", "Marzo" y "Noviembre", guardarlo en nuevo array y retornarlo.
   //Si alguno de los meses no está, devolver: "No se encontraron los meses pedidos"
   // Tu código:
+                // var mes;
+                // for (var i = 0; i < array.length; i++){
+                //   switch(array[i]){
+                //     case "Enero":
+                //     case "Marzo":
+                //     case "Noviembre":
+                //       mes = array[i];
+                //       return mes;
+                //     break;
+                //     default:
+                //       return "No se encontraron los mese pedidos"
+                //     break; 
+                //   }
+                // }
+                              //  var mes = [];
+                              //  for (var k = 0; k < array.length; k++){
+                              //    switch(arrray[k]){
+                              //       case "Enero":
+                              //       case "Marzo":
+                              //       case "Noviembre":
+                              //         mes[0] = array.pop();
+                              //         console.log(mes);
+                              //       break;
+                              //       default:
+                              //         return "No se encontraron los mese pedidos"
+                              //       break; 
+                              //     }
+                              //    }
+                              //  for (var j = 0; j < array.length; j++){
+                              //    switch(arrray[j]){
+                              //       case "Enero":
+                              //       case "Marzo":
+                              //       case "Noviembre":
+                              //         mes[1] = array.pop();
+                              //       break;
+                              //       default:
+                              //         return "No se encontraron los mese pedidos"
+                              //       break; 
+                              //     }
+                              //    }
+                              //  for (var i = 0; i < array.length; i++){
+                              //    switch(arrray[i]){
+                              //      case "Enero":
+                              //      case "Marzo":
+                              //      case "Noviembre":
+                              //        mes[2] = array.pop();
+                              //        return mes;
+                              //      break;
+                              //      default:
+                              //        return "No se encontraron los mese pedidos"
+                              //      break; 
+                              //    }
+                              //  }
+  var nuevoArray = [];
+  for(let i= 0; i<array.length; i++) {
+    if(array[i] === "Enero" || array[i] === "Marzo" || array[i] === "Noviembre") {
+      nuevoArray.push(array[i]);
+    }
+  }
+  if(nuevoArray.length < 3) {
+    return "No se encontraron los meses pedidos";
+  }
+  else {
+      return nuevoArray;
+  }
+
+
 }
 
 
@@ -174,6 +273,13 @@ function mayorACien(array) {
   //La función recibe un array con enteros entre 0 y 200. Recorrer el array y guardar en un nuevo array sólo los
   //valores mayores a 100 (no incluye el 100). Finalmente devolver el nuevo array.
   // Tu código:
+  var nuevoArray = [];
+  for (let i = 0; i < array.length; i++){
+    if (100 < array[i]){
+      nuevoArray.push(array[i]);
+    }
+  }return nuevoArray;
+
 }
 
 
@@ -185,6 +291,13 @@ function breakStatement(numero) {
   //devolver: "Se interrumpió la ejecución"
   //Pista: usá el statement 'break'
   // Tu código:
+  var array = [];
+  var suma = numero;
+  for (let i = 0; i < 10; i++){
+    array.push(suma);
+    suma += 2;
+    
+  } return array;
 }
 
 
