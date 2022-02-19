@@ -76,7 +76,7 @@ function arrayContiene(array, elemento) {
   // Devuelve "true" si está, o "false" si no está
   // Tu código:
   for (var i = 0; i < array.length; i++){
-    if (array[i] == elemento){
+    if (array[i] === elemento){
       return true;
     }
   }return false;
@@ -98,6 +98,12 @@ function promedioResultadosTest(resultadosTest) {
   // "resultadosTest" debe ser una matriz de enteros (int/integers)
   // Itera (en un bucle) los elementos del array, calcula y devuelve el promedio de puntajes
   // Tu código:
+  var suma = 0;
+  for (var i = 0; i < resultadosTest.length; i++){
+    suma = suma + resultadosTest[i];
+  }
+  var promedioDePuntajes = (suma/resultadosTest.length);
+  return promedioDePuntajes;
 }
 
 
@@ -105,13 +111,22 @@ function numeroMasGrande(numeros) {
   // "numeros" debe ser una matriz de enteros (int/integers)
   // Devuelve el número más grande
   // Tu código:
+  var max = Math.max(...numeros);
+  return max;
 }
 
 
-function multiplicarArgumentos() {
+function multiplicarArgumentos() {        //mire la solución, no fue fácil. No sé que esta mal!
   // Usa la palabra clave `arguments` para multiplicar todos los argumentos y devolver el producto
-  // Si no se pasan argumentos devuelve 0. Si se pasa un argumento, simplemente devuélvelo
+  // Si no se pasan argumentos devuelve 0. Si se pasa un argumento, simplemente devuélvelo
   // Escribe tu código aquí:
+//  var producto = Math.imul(...arguments);
+//  return producto;
+if (arguments.length < 0) return 0;
+var total = 1;
+for (var i = 0; i < arguments.length; i++){
+  total = total * arguments[i];
+}return total;
 }
 
 
