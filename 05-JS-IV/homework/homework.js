@@ -160,10 +160,9 @@ function agregarMetodoCalculoDescuento(producto) {
   // producto.calcularPrecioDescuento() -> 20 - (20 * 0.2)
   // Tu código:
   producto['calcularPrecioDescuento'] = function descuento() {
-     return producto.precio - (producto[precio] * producto[porcentajeDeDescuento]); //a producto lo podemos reemplazar por this.
-    };
-  }return producto;
-
+     return producto.precio - (producto['precio'] * producto['porcentajeDeDescuento']); //a producto lo podemos reemplazar por this. (ya que this. hace referencia global al objeto).
+    }
+  return producto;
 }
 
 // No modificar nada debajo de esta línea
