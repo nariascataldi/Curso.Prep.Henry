@@ -9,7 +9,7 @@ function crearGato(nombre, edad) {
   var objeto = {
     nombre: nombre,
     edad: edad,
-    meow: () => {
+    meow: () => {                     // () => {}  equivale a function (){}
       return 'Meow!';
     }
   }; 
