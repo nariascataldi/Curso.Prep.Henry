@@ -8,15 +8,31 @@ function crearUsuario() {       //me costo, mire el video de la solución.
   // {{nombre}} debe ser el nombre definido en cada instancia
   // Devuelve la clase
   // Tu código:
-  function Usuario(opciones){ 
-    this.usuario = opciones.usuario;
-    this.nombre = opciones.nombre;
-    this.email = opciones.email;
-    this.password = opciones.password;
+  //Función constructor
+
+//  function Usuario(opciones){ 
+//    this.usuario = opciones.usuario;
+//    this.nombre = opciones.nombre;
+//    this.email = opciones.email;
+//    this.password = opciones.password;
+//  }
+//  Usuario.prototype.saludar = function (){
+//    return 'Hola, mi nombre es '+ this.nombre;
+//}
+//return Usuario;
+
+//ES6
+  class Usuario {
+    constructor(opciones) {
+      this.usuario = opciones.usuario;
+      this.nombre = opciones.nombre;
+      this.email = opciones.email;
+      this.password = opciones.password;
+    }
+    saludar() {
+      return 'Hola, mi nombre es ' + this.nombre;
+    }
   }
-  Usuario.prototype.saludar = function (){
-    return 'Hola, mi nombre es '+ this.nombre;
-}
 return Usuario;
 }
 
@@ -35,6 +51,16 @@ function agregarStringInvertida() {
   // Ej: 'menem'.reverse() => menem
   // 'toni'.reverse() => 'inot'
   // Pista: Necesitarás usar "this" dentro de "reverse"
+ //* String sería nuestro constructor */
+
+
+ String.prototype.reverse = function(){
+  var stringinver = '';
+  for (let i = (this.length-1); i >= 0 ; i--){   //this hace referencia a una cadena ya sea toni, menem, etc...
+    stringinver = stringinver + this.charAt(i);     //morí en charAt()
+
+  }return stringinver;
+ }
 }
 
 // ---------------------------------------------------------------------------//
