@@ -20,7 +20,7 @@ function crearUsuario() {       //me costo, mire el video de la solución.
 return Usuario;
 }
 
-function agregarMetodoPrototype(Constructor) {
+function agregarMetodoPrototype(Constructor) {          //vamos!
   // Agrega un método al Constructor del `prototype`
   // El método debe llamarse "saludar" y debe devolver la string "Hello World!"
   // Tu código:
