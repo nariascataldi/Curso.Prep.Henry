@@ -32,12 +32,18 @@ function sumarArray(numeros, cb) {
     return (acc + elementos);
   })
   cb(suma);
+  /* alternativa
+  cb(numeros.reduce((a,b) => (a+b))); 
+  */
 }
 
 function forEach(array, cb) {
   // Itera sobre la matriz "array" y pasa los valores al callback uno por uno
   // Pista: Estarás invocando a `cb` varias veces (una por cada valor en la matriz)
   //Tu código:
+  array.forEach(function(elementos, indice){
+    cb(elementos);
+  })
 }
 
 function map(array, cb) {
