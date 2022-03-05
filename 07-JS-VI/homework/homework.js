@@ -65,6 +65,11 @@ function filter(array) {
     return valor[0] === 'a';
   })
   return arrayFilter
+  /* alternativa
+  return array.filter(function(valor){
+    return valor[0] === 'a';
+  })
+  */
 }
 
 // No modificar nada debajo de esta línea
