@@ -4,6 +4,10 @@ function mayuscula(nombre) {
   //La función recibe un nombre y debe devolver el mismo que recibe pero con su primer letra en mayúscula
   //ej: Recibe "mario" ----> Devuelve "Mario"
   //Tu código:
+  var letra = nombre[0].toUpperCase();
+  var corte = nombre.slice(1);
+  var conactenar = letra + corte;
+  return conactenar;
 }
 
 function invocarCallback(cb) {
