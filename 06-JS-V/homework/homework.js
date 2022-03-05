@@ -56,7 +56,7 @@ function agregarStringInvertida() {
  String.prototype.reverse = function(){
   var stringinver = '';
   for (let i = (this.length-1); i >= 0 ; i--){   //this hace referencia a una cadena ya sea toni, menem, etc...
-    stringinver = stringinver + this.charAt(i);     //morí en charAt()
+    stringinver = stringinver + this[i];     //ver charAt()
     // this[i] también funcionó y no utilizo charAt
       // >'nestor'.charAt(0)
       // < 'n'
