@@ -13,16 +13,16 @@ function deObjetoAmatriz(objeto){
 
   // return (Object.entries(objeto));       //una forma
 
-  var array = [];
+  var newArray = [];
   let key = Object.keys(objeto);
   let value = Object.values(objeto);
     for (let i = 0; i < key.length; i++){
       for (let j = 0; j < value.length; j++){
-        array = array.push([key[i], value[j]])
+        newArray.push([key[i], value[j]])
         i++;
       }
     }
-    return array;
+    return newArray;
 }
 
 
