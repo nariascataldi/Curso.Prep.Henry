@@ -8,6 +8,9 @@ function mayuscula(nombre) {
   var corte = nombre.slice(1);
   var conactenar = letra + corte;
   return conactenar;
+  /* alternativa
+  return nombre.replace(nombre[0], nombre[0].toUpperCase());
+  */
 }
 
 function invocarCallback(cb) {
