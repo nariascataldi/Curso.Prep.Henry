@@ -67,9 +67,12 @@ function asAmirror(str) {
   //pero con cada una de sus palabras invertidas, como si fuera un espejo.
   //Ej: Recibe ---> "The Henry Challenge is close!" || Devuelve ---> "ehT yrneH egnellahC si !esolc"
   //Escribe tu código aquí
-  //.slice + split para crear un array ej ['the', 'Henry', etc] Luego hago reverse y retorno con join
+  // .split para crear un array ej ['the', 'Henry', etc] Luego hago reverse y retorno con join
   var arrayEspacio = str.split(' ');
-    
+  let espejo = [];
+  for (let i = 0; i < arrayEspacio.length; i++){
+    espejo.push(arrayEspacio[i].split('').reverse().join(''));
+  }return espejo.join(' ');
 } 
 
 
