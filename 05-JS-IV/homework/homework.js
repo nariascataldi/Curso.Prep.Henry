@@ -123,7 +123,7 @@ function pasarUsuarioAPremium(usuarios) {
   // Devuelve el array de usuarios
   // Tu código:
       // usuarios = [{nombre: Néstor, esPremium: false}, {nombre: Inés, esPremium: true}]
-  for (usuario in usuarios){
+  for (let usuario in usuarios){
     usuarios[usuario]['esPremium'] = true;
   }
   return usuarios
