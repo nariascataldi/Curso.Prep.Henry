@@ -103,11 +103,13 @@ function estaEnRango(numero) {
   // Devuelve "true" si "numero" es menor que 50 y mayor que 20
   // De lo contrario, devuelve "false"
   // Tu código:
-  if (numero < 50 && 20 < numero){
-    return true;
-  } else {
-    return false;
-  }
+  // if (numero < 50 && 20 < numero){
+  //   return true;
+  // } else {
+  //   return false;
+  // }
+  return (20 < numero && numero < 50); 
+
 }
 
 function esEntero(numero) {
@@ -118,12 +120,12 @@ function esEntero(numero) {
   // De lo contrario, devuelve "false"
   // Pista: Puedes resolver esto usando `Math.floor`
   // Tu código:
-  if (!(numero - Math.floor(numero))){
-    return true;
-  }else{
-    return false;
-  }
-   
+  // if (!(numero - Math.floor(numero))){
+  //   return true;
+  // }else{
+  //   return false;
+  // }
+   return (!(numero - Math.floor(numero)));
 }
 
 function fizzBuzz(numero) {
@@ -131,16 +133,25 @@ function fizzBuzz(numero) {
   // Si "numero" es divisible entre 5, devuelve "buzz"
   // Si "numero" es divisible entre 3 y 5 (ambos), devuelve "fizzbuzz"
   // De lo contrario, devuelve el numero
-  if (!(numero % 3)){
-   if (!(numero % 5)) {
-     return 'fizzbuzz';
-    }else{
-      return 'fizz';
-    }
-  }else if (!(numero % 5)){
-     return 'buzz';
-  }else {
-     return numero;
+  //if (!(numero % 3)){
+  // if (!(numero % 5)) {
+  //   return 'fizzbuzz';
+  //  }else{
+  //    return 'fizz';
+  //  }
+  //}else if (!(numero % 5)){
+  //   return 'buzz';
+  //}else {
+  //   return numero;
+  //}
+  if (!(numero % 3) && !(numero % 5)){
+    return 'fizzbuzz';
+  }else if(!(numero % 3)){
+    return 'fizz';
+  }else if(!(numero % 5)){
+    return 'buzz';
+  }else{
+    return numero;
   }
 }
 
@@ -199,18 +210,21 @@ function tablaDelSeis(){
   //La función devuelve un array con los resultados de la tabla de multiplicar del 6 en orden creciente.
   //Escribe tu código aquí   
   var tabla = [];
-      tabla[0] = 0 * 6;
-      tabla[1] = 1 * 6;
-      tabla[2] = 2 * 6;
-      tabla[3] = 3 * 6;
-      tabla[4] = 4 * 6;
-      tabla[5] = 5 * 6;
-      tabla[6] = 6 * 6;
-      tabla[7] = 7 * 6;
-      tabla[8] = 8 * 6;
-      tabla[9] = 9 * 6;
-      tabla[10] = 10 * 6;
-  //  var tabla = [0, 6, 12, 18, 24, 30, 36, 42, 48, 54, 60];
+  for (let i = 0; i <= 10; i++){
+    tabla[i] = i * 6;
+  }
+  //     tabla[0] = 0 * 6;
+  //     tabla[1] = 1 * 6;
+  //     tabla[2] = 2 * 6;
+  //     tabla[3] = 3 * 6;
+  //     tabla[4] = 4 * 6;
+  //     tabla[5] = 5 * 6;
+  //     tabla[6] = 6 * 6;
+  //     tabla[7] = 7 * 6;
+  //     tabla[8] = 8 * 6;
+  //     tabla[9] = 9 * 6;
+  //     tabla[10] = 10 * 6;
+  // //  var tabla = [0, 6, 12, 18, 24, 30, 36, 42, 48, 54, 60];
     return tabla;
 }
 
@@ -230,7 +244,7 @@ function doWhile(numero) {
   //Usar el bucle do ... while.
   let i = 0;
   do {
-    i = i + 1;
+    i++;
     numero = numero + 5;
   } while (i < 8);
   return numero;
