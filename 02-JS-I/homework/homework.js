@@ -68,29 +68,32 @@ function tienenMismaLongitud(str1, str2) {
   // De lo contrario, devuelve "false"
   // Tu código:
   //.length
- var caracteresA = (str1);
- var caracteresB = (str2);
- if (caracteresA.length === caracteresB.length){
-   return true;
- } return false;
+ //var caracteresA = (str1);
+ //var caracteresB = (str2);
+ //if (caracteresA.length === caracteresB.length){
+ //  return true;
+ //} return false;
+  return (str1.length === str2.length);
 }
 
 function menosQueNoventa(num) {
   // Devuelve "true" si el argumento de la función "num" es menor que noventa
   // De lo contrario, devuelve "false"
   // Tu código:
-  if (num < 90){
-    return true;
-  } return false;
+//  if (num < 90){
+//    return true;
+//  } return false;
+  return (num < 90);
 }
 
 function mayorQueCincuenta(num) {
   // Devuelve "true" si el argumento de la función "num" es mayor que cincuenta
   // De lo contrario, devuelve "false"
   // Tu código:
-  if (num > 50){
-    return true;
-  } return false;
+//  if (num > 50){
+//    return true;
+//  } return false;
+  return (num > 50);
 }
 
 function obtenerResto(x, y) {
@@ -103,21 +106,23 @@ function esPar(num) {
   // Devuelve "true" si "num" es par
   // De lo contrario, devuelve "false"
   // Tu código:
-  var par = (num % 2);
-
-  if (par === 0){
-    return true;
-  } return false;
+//  var par = (num % 2);
+//
+//  if (par === 0){
+//    return true;
+//  } return false;
+  return ((num % 2) === 0);
 }
 
 function esImpar(num) {
   // Devuelve "true" si "num" es impar
   // De lo contrario, devuelve "false"
   // Tu código:
-  var impar = num % 2;
-  if (impar !== 0){
-    return true;
-  } return false;
+  // var impar = num % 2;
+  // if (impar !== 0){
+  //   return true;
+  // } return false;
+  return ((num % 2) !== 0);
   
 }
 
